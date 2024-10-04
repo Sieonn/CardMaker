@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ureca.card.dao.CardMapper">
+    <insert id="insertCard" parameterType="com.ureca.card.dto.Card">
+        INSERT INTO card (title, content, imagePath, writer)
+        VALUES (#{title}, #{content}, #{imagePath}, #{writer})
+    </insert>
+
+    <select id="selectAllCards" resultType="com.ureca.card.dto.Card">
+        SELECT id, title, content,writer,imagePath FROM card ORDER BY created_at DESC
+    </select>
+
+    <select id="selectCardById" parameterType="long" resultType="com.ureca.card.dto.Card">
+        SELECT id, title, content,writer,imagePath FROM card WHERE id = #{id}
+    </select>
+
+    <update id="updateCard" parameterType="com.ureca.card.dto.Card">
+        UPDATE card
+        SET title = #{title},
+            content = #{content},
+            imagePath = #{imagePath},
+            writer = #{writer}
+        WHERE id = #{id}
+    </update>
+    <delete id="deleteCard" parameterType="long">
+        DELETE FROM card WHERE id = #{id}
+    </delete>
+
+</mapper>

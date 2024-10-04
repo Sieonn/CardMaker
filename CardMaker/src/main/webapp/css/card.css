@@ -1,0 +1,163 @@
+
+html, body {
+	margin: 0;
+}
+.hline2 {
+	border-bottom: 1px solid var(--main-color);
+	width: 100%;
+	height: 1px;
+	margin: 0 auto; /* Center alignment */
+	margin: 15px 0;
+}
+
+.card-detail {
+	width: 50vh;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	padding: 20px;
+	border: 0.3px solid rgb(189, 189, 189, 46%);
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px rgba(255, 255, 254, 0.1);
+	text-align: center;
+	background-color: #171717;
+}
+
+.card-detail img {
+	width: 80%;
+	max-height: 40vh;
+	object-fit: contain;
+	border-radius: 4px;
+	background-color: #000000;
+}
+
+.card-detail h3 {
+	margin: 16px 0;
+	font-size: 1.5em;
+}
+
+.card-detail p {
+	font-size: 1em;
+	color: #555;
+}
+
+.actions {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center; /* 버튼을 중앙에 정렬 */
+	gap: 10px; /* 버튼 사이 간격 조정 */
+}
+
+.t {
+	display: flex;
+	margin: 10px 3%;
+}
+
+.ti {
+	color: var(--main-color);
+	height: auto;
+	flex:0.2;
+	font-weight: 600;
+	text-align: right;
+	margin-right: 10px;
+	display: flex; /* flex 컨테이너로 설정 */
+	align-items: center; /* 자식 요소를 수직 중앙으로 정렬 */
+	justify-content: center;
+}
+
+.ti2 {
+	height: auto;
+	background-color: #222222;
+	border-radius: 5px;
+	border:none;
+	padding: 10px;
+	color: white;
+	flex:0.9;
+	overflow-y: auto;
+}
+
+.blink {
+	animation: blinking 2s alternate infinite;
+}
+
+@keyframes blinking {
+	from { box-shadow: 0 0 15px 7px #c5ffb0; }
+	50% { box-shadow: 0 0 5px var(--main-color); }
+	to { box-shadow: 0 0 7px 5px #dcf8d2; }
+	from { box-shadow: 0 0 7px 10px #b2fd96; }
+}
+
+.subbnt {
+	cursor: pointer;
+	padding: 0.5em 1em;
+	width: 200px;
+	background: none;
+	border: 2px solid var(--main-color);
+	color: var(--main-color);
+	border-radius: 5px;
+	font-size: 15px;
+	transition: 0.25s;
+	text-decoration: none; /* 링크 스타일 제거 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.subbnt:hover {
+	box-shadow: inset 0 -3.25em 0 0 var(--main-color);
+	color: black;
+}
+
+.subbnt2 {
+	cursor: pointer;
+	padding: 0.5em 1em;
+	width: 200px;
+	background: none;
+	border: 2px solid rgb(234, 100, 42);
+	color: rgb(234, 100, 42);
+	border-radius: 5px;
+	font-size: 15px;
+	transition: 0.25s;
+	text-decoration: none; /* 링크 스타일 제거 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.subbnt2:hover {
+	box-shadow: inset 0 -3.25em 0 0 rgb(234, 100, 42);
+	color: black;
+}
+
+
+.subbnt a {
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.detitle{
+font-size: 32px; text-align: left; padding-bottom:20px;
+font-weight: 900;
+margin: 20px 0 10px 0;
+text-align: center;
+
+}
+.hr2{
+border-bottom: 2px solid white;
+ width: 100%;
+ height: 0.7px;
+ margin-top:10px;
+}
+
+textarea{
+   min-height: 50px;
+            padding: 10px;	
+            resize: none; /* 사용자가 수동으로 크기 조정하지 못하게 함 */
+            overflow: hidden;
+}
+.script{
+	margin-top: 30px;
+}
